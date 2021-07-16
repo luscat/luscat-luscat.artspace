@@ -1,0 +1,544 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+}
+
+#wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+header {
+	width: 100%;
+	padding-top: 35px;
+	position: fixed;
+	z-index: 1;
+}
+
+.menu {
+	padding-left: 10px;
+}
+
+.menu ul {
+	display: flex;
+	justify-content: center;
+}
+
+.menu ul li {
+	list-style: none;
+}
+
+.menu ul li:not(:first-child) {
+	margin-left: 65px;
+}
+
+.menu .header-link.logo {
+	font-family: 'Botaky';
+	font-size: 28px;
+	position: relative;
+	display: table;
+	bottom: 4px;
+	color: white;
+	text-shadow: 5px 5px 10px rgba(255, 255, 255, 1);
+}
+
+.menu .header-link.logo::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 1px;
+	bottom: -4px;
+	left: 0;
+	background-color: white;
+	transition: width 0.2s linear;
+}
+
+.menu .header-link.logo:hover::after {
+	width: calc(100% - 4px);
+}
+
+.menu ul li .header-link {
+	font-family: 'MTD Antro Vectra';
+	color: aliceblue;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	font-size: 24px;
+	letter-spacing: 5px;
+}
+
+.menu ul li .header-link:hover {
+	color: white;
+	transition: 0.4s;
+	text-shadow: 5px 5px 10px rgba(255, 255, 255, 1);
+}
+
+#main {
+	position: relative;
+	width: 100%;
+}
+
+#bg {
+	background: url(../img/GradientFill.png);
+	background-size: contain;
+	height: 100%;
+}
+
+#main .banner {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+#main .banner video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#main .content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+#main .content h3 {
+	font-family: 'MTD Antro Vectra';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 78px;
+	letter-spacing: 5px;
+	color: aliceblue;
+}
+
+#main .content .content-img {
+	width: 62%;
+	overflow: hidden;
+	margin-top: -148px;
+}
+
+#main .content p {
+	font-family: 'Elle Futura';
+	font-weight: 300;
+	font-style: normal;
+	font-size: 24px;
+	color: white;
+	text-transform: uppercase;
+	margin-top: -86px;
+}
+
+#main .content .elipse-pattern {
+	margin-top: -98px;
+	animation: elipseloop 3s infinite;
+	animation-delay: 0.4s;
+}
+
+/* animation elispe-img */
+
+@keyframes elipseloop {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(-360deg)
+	}
+}
+
+/* About */
+
+#about {
+	width: 100%;
+	height: 100%;
+	background-color: #010101;
+	padding-top: 60px;
+	display: flex;
+}
+
+#about .col-7 img {
+	width: 100%;
+	overflow: hidden;
+	object-fit: cover;
+}
+
+#about .col-7.avatar-box {
+	position: relative;
+}
+
+#about .col-7.avatar-box .avatar-text {
+	position: absolute;
+	top: 21%;
+	left: 8%;
+	color: grey;
+	font-family: 'MTD Antro Vectra';
+	font-size: 95px;
+}
+
+#about .col-4 .about-content {
+	text-align: center;
+	position: relative;
+}
+
+#about .row.flex-row {
+	display: flex;
+	align-items: center;
+}
+
+#about .col-4 .about-content .star-pattern__white {
+	margin-right: -264px;
+	transform: scale(0.9);
+}
+
+#about .col-4 .about-content .ages {
+	position: absolute;
+	top: 9%;
+	right: 39%;
+	font-family: 'MTD Antro Vectra';
+	font-size: 50px;
+	color: grey;
+}
+
+#about .col-4 .about-content h3 {
+	font-family: 'Botaky';
+	font-weight: normal;
+	font-style: normal;
+	color: white;
+	font-size: 30px;
+	word-spacing: 4px;
+}
+
+#about .col-4 .about-content h3:hover {
+	transition: 0.5s;
+	text-shadow: 5px 5px 10px rgba(255, 255, 255, 1);
+}
+
+#about .col-4 .about-content p {
+	font-family: 'Elle Futura';
+	font-weight: 300;
+	font-style: normal;
+	color: aliceblue;
+	font-size: 17px;
+}
+
+/* Services */
+
+#services {
+	width: 100%;
+	height: 100%;
+	background-color: #010101;
+	padding-top: 23px;
+	display: flex;
+	position: relative;
+	padding-bottom: 125px;
+}
+
+#services .heading-services {
+	position: absolute;
+	top: -55%;
+	right: 22%;
+	color: grey;
+	font-family: 'MTD Antro Vectra';
+	font-size: 95px;
+	letter-spacing: 3px;
+}
+
+#services img {
+	width: 7%;
+}
+
+#services .services-box {
+	text-align: center;
+}
+
+#services .star-services {
+	position: absolute;
+	right: 20%;
+	top: -20%;
+}
+
+#services .services-box .heading-text {
+	font-family: 'Elle Futura';
+	font-size: 18px;
+	color: white;
+}
+
+#services .services-box .second-text {
+	font-family: 'Elle Futura';
+	font-weight: normal;
+	font-style: italic;
+	color: #999999;
+}
+
+#services .services-box .third-text {
+	font-family: 'Elle Futura';
+	font-weight: normal;
+	font-style: italic;
+	color: #999999;
+}
+
+#services .row.flex-row {
+	display: flex;
+	justify-content: center;
+}
+
+/* Project */
+
+#projects {
+	width: 100%;
+	height: 100%;
+	/* background-color: #1d1d1d; */
+	display: flex;
+	padding-top: 50px;
+	position: relative;
+}
+
+#projects .heading-projects {
+	position: absolute;
+	color: grey;
+	top: 4%;
+	left: 15%;
+	font-family: 'MTD Antro Vectra';
+	font-size: 95px;
+	letter-spacing: 3px;
+}
+
+#projects .projects-content {
+	position: relative;
+	padding-bottom: 150px;
+}
+
+#projects .col-4 h3 {
+	font-family: 'Botaky';
+	font-weight: normal;
+	font-style: normal;
+	color: white;
+	font-size: 30px;
+	word-spacing: 4px;
+	letter-spacing: 3px;
+	margin-bottom: 40px;
+}
+
+#projects .col-4 .infor-artwork {
+	font-family: 'MTD Antro Vectra';
+	position: absolute;
+	right: 30%;
+	top: 6%;
+	font-size: 50px;
+	color: grey;
+}
+
+#projects .col-4 p {
+	font-family: 'Elle Futura';
+	font-weight: 300;
+	font-style: normal;
+	color: aliceblue;
+	font-size: 17px;
+	margin-left: 30px;
+}
+
+#projects .col-4 .star-pattern__white {
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	width: 10%;
+}
+
+#projects .row.flex-row {
+	justify-content: space-around;
+	align-items: center;
+}
+
+.star-pattern__white2 {
+	position: absolute;
+	top: 40%;
+	left: 19%;
+	width: 1.5%;
+}
+
+.star-pattern__white3 {
+	position: absolute;
+	left: 19%;
+	width: 1.5%;
+}
+
+.img-line {
+	position: relative;
+}
+
+.img-line:hover img {
+	transform: scale(0.9);
+	transition: 0.4s ease-in-out;
+}
+
+.line {
+	position: absolute;
+	width: 60%;
+	height: 0.5px;
+	background-color: white;
+	bottom: -22px;
+	left: 150px;
+}
+
+/* Contact */
+
+#contact {
+	width: 100%;
+	height: 100%;
+	/* background-color: #1d1d1d; */
+	padding-top: 60px;
+	display: flex;
+	position: relative;
+	padding-bottom: 300px;
+}
+
+#contact .social-media {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 120px;
+}
+
+#contact .social-media a {
+	font-family: 'Elle Futura';
+	text-decoration: none;
+	color: white;
+	font-weight: 300;
+	font-style: normal;
+	transition: 0.5s;
+}
+
+#contact .social-media a:hover {
+	text-shadow: 5px 5px 10px rgba(255, 255, 255, 1);
+}
+
+#contact .social-media .fb {
+	display: flex;
+	justify-content: flex-start;
+	margin-right: 200px;
+	margin-bottom: 30px;
+}
+
+#contact .social-media .instagram {
+	display: flex;
+	justify-content: center;
+}
+
+#contact .social-media .behance {
+	display: flex;
+	justify-content: flex-end;
+	margin-left: 200px;
+	margin-top: 30px;
+}
+
+#contact .social-media .mail {
+	display: flex;
+	justify-content: center;
+	margin-left: 120px;
+	margin-top: 30px;
+}
+
+#contact .social-media .fb, #contact .social-media .instagram, #contact .social-media .behance, #contact .social-media .mail {
+	flex-direction: row-reverse;
+	align-items: center;
+}
+
+#contact .social-media .icon img {
+	width: 50px;
+	display: flex;
+	flex-direction: row-reverse;
+	height: 50px;
+	margin: 0 12px;
+}
+
+#contact .heading-contact {
+	position: absolute;
+	right: 22%;
+	top: 0;
+	color: white;
+	font-family: 'MTD Antro Vectra';
+	font-size: 95px;
+	letter-spacing: 3px;
+}
+
+#footer{
+	position: relative;
+}
+.register{
+	position: absolute;
+	top:50px;
+	background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 203, 126, 132, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+	padding: 10px 10px;
+	border-radius:30px;
+	left:50%;
+	transform: translate(-50%,0);
+}
+
+table{
+	border:none;
+	
+}
+td{
+	padding: 10px;
+	border:none;
+}
+input{
+	font-family: 'Elle Futura';
+	font-weight: normal;
+	width:100%;
+	padding: 10px 0px 10px 20px;
+	box-sizing: border-box;
+	outline: none;
+	background: transparent;
+	color: white;
+	border: 1px solid white;
+	border-radius: 20px;
+	
+}
+input[type="checkbox"]{
+	width: 24px;
+	float:left;
+}
+span{
+	float: left;
+	margin-top:-5px;
+	color:white;
+}
+button{
+	width:100%;
+	padding: 10px 0px;
+	background: white;
+	border:none;
+	border-radius: 20px;
+	
+}
+button:hover{
+	background: white;
+	
+}
+
+.check-text{
+	font-family: 'Elle Futura';
+	margin-top:-8px;
+	color:
+}
+
+#footer::before {}
